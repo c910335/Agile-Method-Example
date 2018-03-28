@@ -1,7 +1,5 @@
 package tw.tatsujin.sort;
 
-import java.util.Arrays;
-
 public class SortImpl implements Sort {
 
     private int[] array;
@@ -53,7 +51,7 @@ public class SortImpl implements Sort {
     }
 
     private int partition(int a, int n) {
-        int v = n / 2, l = a + 1, r = a + n - 1;
+        int v = a + n / 2, l = a + 1, r = a + n - 1;
         while(true) {
             while (comp.call(l, v) < 0)
                 l++;
